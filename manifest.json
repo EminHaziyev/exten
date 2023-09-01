@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Button Extension",
+  "version": "1.0",
+  "description": "Add buttons to YouTube.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "https://www.youtube.com/"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "popup.js", "material-components-web.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
