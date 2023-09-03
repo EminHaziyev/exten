@@ -15,4 +15,7 @@ iframe. allow="camera https://final.syntheyesis.repl.co"
 
 
 document.body.appendChild(iframe);
-console.log(iframe.contentWindow.document.getElementsByClassName("blend-shapes-label"));
+setInterval(5000, con);
+function con() {
+    console.log(iframe.contentWindow.document.getElementsByClassName("blend-shapes-label"));
+}
