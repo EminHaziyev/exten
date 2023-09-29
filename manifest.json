@@ -1,11 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Button Extension",
+  "name": "Syntheyesis",
   "version": "1.0",
-  "description": "Add buttons to YouTube.",
+  "description": "Controll websites with your eyes.",
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/*"],
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://web.whatsapp.com/",
+        "https://www.instagram.com/"],
       "js": ["contentScript.js"]
     }
   ],
@@ -13,11 +16,18 @@
     "activeTab",
     "scripting"
   ],
+  "icons": {
+    "16": "/logo/16.png",  
+    "48": "/logo/48.png",   
+    "128": "/logo/128.png" 
+  },
   "action": {
     "default_popup": "popup.html"
   },
   "host_permissions": [
-    "https://www.youtube.com/"
+    "https://www.youtube.com/",
+    "https://web.whatsapp.com/",
+    "https://www.instagram.com/"
   ],
   "web_accessible_resources": [
     {
